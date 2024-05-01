@@ -34,7 +34,7 @@ def download_comics():
     comics_url = comics_json['img']
     comics_title = comics_json['title']
     comics_extension = pick_comics_extension(comics_url)
-    comics_filename = f'comics_dir/{comics_number}-{comics_title}{comics_extension}'
+    comics_filename = f'{comics_number}-{comics_title}{comics_extension}'
     response = requests.get(comics_url)
     response.raise_for_status()
     with open(comics_filename, 'wb') as file:
