@@ -21,7 +21,7 @@ def get_comics_max_number() -> int:
     return comics_max_number
 
 
-def pick_comics_extension(comics_url: str):
+def pick_comics_extension(comics_url: str) -> str:
     path = urlsplit(comics_url).path
     comics_extension = os.path.splitext(path)[1]
     return comics_extension
