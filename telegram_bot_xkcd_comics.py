@@ -2,7 +2,7 @@ import os
 import telegram
 import glob
 from dotenv import load_dotenv
-from Download_random_comics import download_comics
+from download_random_comics import download_comics
 
 
 def send_photo_by_bot(chat_id: str, bot: telegram.bot.Bot, comics_filename: str,  caption: str):
