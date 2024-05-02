@@ -25,7 +25,11 @@ pip3 install -r requirements.txt
 ### Пример запуска скриптов
 Данный репо содержит 2 скрипта.
 Скрипт Telegram_bot_xkcd_comics.py используя набор функций скрипта Download_random_comics.py скачивает комикс со случайно сгенерированным номером. Скачанный в виде картинки png комикс подхватывается ботом и отправляется в телеграм, после чего скачанный файл удаляется.
-
+```commandline
+source env/bin/activate
+python3 Telegram_bot_xkcd_comics.py
+```
+![](https://github.com/Skripko-A/tg_channel_comics/blob/master/xkcd_comics_bot_chat.png)
 
 ### Цель проекта
 Код написан в образовательных целях на онлайн-курсе для веб-разработчиков [dvmn.org](https://dvmn.org/).
