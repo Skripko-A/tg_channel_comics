@@ -4,7 +4,7 @@ from urllib.parse import urlsplit
 import requests
 
 
-def request_for_comics_info(comics_number: int) -> dict:
+def fetch_comics_metadata(comics_number: int) -> dict:
     url = f'https://xkcd.com/{comics_number}/info.0.json'
     response = requests.get(url)
     response.raise_for_status()
@@ -29,7 +29,7 @@ def pick_comics_extension(comics_url: str) -> str:
 
 def download_comics() -> (str, str):
     comics_number: int = randint(0, get_comics_max_number())
-    comics_data: dict = request_for_comics_info(comics_number)
+    comics_data: dict = fetch_comics_metadata(comics_number)
     author_comics_comment: str = comics_data['alt']
     comics_url: str = comics_data['img']
     comics_title: str = comics_data['title']
