@@ -10,7 +10,7 @@ def send_photo_by_bot(chat_id: str, bot: telegram.bot.Bot, comics_filename: str,
         bot.send_photo(chat_id=chat_id, photo=photo, caption=caption)
 
 
-def clear_temp_png_files():
+def clear_temp_png_xkcd_files():
     png_files = glob.glob('**/*xkcd.png', recursive=True)
     for png_file in png_files:
         os.remove(png_file)
@@ -25,7 +25,7 @@ def main():
         comics_filename, comment = download_comics()
         send_photo_by_bot(chat_id, bot, comics_filename,  comment)
     finally:
-        clear_temp_png_files()
+        clear_temp_png_xkcd_files()
 
 
 if __name__ == '__main__':
